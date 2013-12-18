@@ -1,0 +1,26 @@
+<% if @guess == @number %> 
+<p> You and the CPU guessed the same. The result is a draw! <p>
+
+<% elsif @guess == 1 %> 
+	<% if @number == 2%>
+	<p> You guessed rock! CPU guessed paper! You lose! </p>
+	<% elsif @number == 3%>
+	<p> You guessed rock! CPU guessed scissors! You're a winner! </p>
+	<% end %>
+
+<% elsif @guess == 2 %> 
+	<% if @number == 1%>
+	<p> You guessed paper! CPU guessed rock! You're a winner! </p>
+	<% elsif @number == 3%>
+	<p> You guessed paper! CPU guessed scissors! You lose! </p>
+	<% end %>
+
+<% elsif @guess == 3 %> 
+	<% if @number == 1%>
+	<p> You guessed scissors! CPU guessed rock! You lose! </p>
+	<% elsif @number == 2%>
+	<p> You guessed scissors! CPU guessed paper! You're a winner! </p>
+	<% end %>
+<% end %>
+
+<br /> <%= link_to "Try again", rps_path %>

@@ -1,0 +1,7 @@
+<% if @guess == @number %>
+<p>You're a winner!</p>
+<% else %>
+<p> You lose. </p>
+<% end %>
+
+<br /> <%= link_to "Try again", rps_path %>

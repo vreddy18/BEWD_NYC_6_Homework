@@ -1,0 +1,5 @@
+
+<p> Guess a number between 1 and 5. </p>
+<% 1.upto(5) do |num| %>
+<%= link_to "Guess #{num}", "/secret_number/#{num}" %>
+<% end %>
