@@ -38,8 +38,7 @@ class Foursquare
   get_info
   end 
 
-  def get_info
-    client
+  def user_params
     puts "Please enter your city name."
     city = gets.strip.to_s.capitalize
     puts "Please enter your two-letter state code."
@@ -47,12 +46,17 @@ class Foursquare
     location = "#{city}, #{state}" 
     puts "What are you looking for?"
     query = gets.strip.to_s
+  end
+
+  def get_info
+    client
+    user_params
     response = client.search_venues(:near => "#{location}", :query => "#{query}", :limit => 5, :intent => 'checkin')
-      if response == nil
-        bad_input
-      end
-    relevant_response = response["groups"][0]["items"]
-    relevant_response.each do |venue|
+    unless response.is_a? Hash
+      bad_input
+    else
+      relevant_response = response["groups"][0]["items"]
+      relevant_response.each do |venue|
       venue_name = venue["name"]
       venue_contact = venue["contact"]["formattedPhone"]
       venue_address = venue["location"]["address"]
@@ -70,5 +74,6 @@ puts "Welcome to Finderoo!  Enter your location and what you're looking for (i.e
 and get the top 5 hits that match your request. You'll get the name of the venue, address, contact information, and the 
 number of times people have checked-in via Foursquare."
 foursquare.get_info
+
 puts foursquare.display_venue_info
 
