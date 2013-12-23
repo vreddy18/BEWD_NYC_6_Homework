@@ -1,0 +1,24 @@
+For my final project, I would like to create a basic prototype for a social media site that 1) is a community of people helping other people and 2) judges users (via rating/score) based on the things they do for other people/how helpful they are. 
+
+  Target Audience:
+
+-People who see themselves as "do-gooders"
+-People who want other people to think of them as a resource for help
+-People who want to find others to get help on a certain task, whether in-person or online
+
+
+  Description of Functionality
+  -Ability to create individual accounts
+  -Ability to post requests/questions 
+  -Ability to response to requests that other users have posted
+  -Ability to view score that judges how helpful you are
+  -Ability to search users by various tags (i.e. expertise, location, etc.)
+
+  API(s) used (optional and may not be used if it turns out to be too complicated):
+  -Quora
+  -Yelp
+  -Foursquare
+  -Some other forum/Q&A-type site
+
+
+I envision that users would receive a score based on how helpful readers find their posts on sites such as Quora, Yelp, etc, in addition to some sort of request system built-in to the site itself.  This means that users would have to be able to post requests/questions for other users to respond to.  I'm not sure if this would be outside the scope of what I will be able to accomplish by the end of the class, but it would be good to get some feedback to help me simplify the concept from a technical standpoint. 
