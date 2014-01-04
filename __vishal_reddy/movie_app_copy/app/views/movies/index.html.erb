@@ -1,0 +1,16 @@
+<p>Welcome to Instaflix! See our collection of movies below! </p>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+		<th>Year Released</th>
+
+<% @movies.each do |movie| %>
+
+<tr>
+<td><%= movie.title %></td>
+<td><%= movie.description %></td>
+<td><%= movie.year_released %></td>
+</tr>
+<% end %>
+</table>
