@@ -1,0 +1,22 @@
+<h3> <%= @post.title %> </h3>
+<br/>
+<o> <%= @post.content %> </p>
+<%= link_to "Back", posts_path %>
+<%= link_to "Edit", edit_post_path %>
+<hr>
+<h4> Comments: </h4>
+<% @post.comments.each do |comment| %>
+	<p class ="<%= cycle('even', 'odd') %> note" > <b><%= comment.email %></b> <br/> <%= comment.content %></p>
+<% end %>
+<p><em>Add New Comment: </em></p>
+<%= form_for ([@post, @comment]) do |form| %>
+<%= form.label :email %>
+<%= form.text_field :email %>
+<br/>
+<%= form.label :content %>
+<%= form.text_area :content %>
+<br/>
+<%= form.submit %>
+<% end %>
+
+
